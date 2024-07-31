@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Dato il dataset scaricabile al link https://raintonic.com/careers/es5_dataset.json creare
+        una mini applicazione che mostri in modo consono i dati. Fornire queste funzionalità:
+        a. possibilità di ricercare i contatti tramite ricerca (sui campi first_name e
+        last_name);
+        b. possibilità di contrassegnare i contatti come preferiti (salvare l’informazione nel
+        local storage);
+        c. possibilità di visualizzare solamente i contatti preferiti.
+        L'applicazione può essere scritta in un framework javascript a piacere.
+        ">
+        <meta name="author" content="Yari Piras">
+        <title>App-JS</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+<body>
+
+<b><p id="istruzioni"></p></b>
+<p id="demo2"></p>
+<fieldset>
+    <form action="" autocomplete="off" id="form">
+    <label for="nome">Cerca per nome:</label>
+        <input class="inputField" type="text" name="nome" id="nome" value="" placeholder="Nome" 
+               oninput="findName(event)"
+               autofocus 
+               autocomplete="none">
+    <label for="cognome">Cerca per cognome:</label>
+        <input class="inputField" type="text" name="cognome" id="cognome" value="" placeholder="Cognome"
+               oninput="findName(event)"
+               autocomplete="none">
+    </form>
+    <hr>
+    <button type="button" id="reset" class="btn" onclick="resetSearch()">Reimposta la ricerca</button>
+    <button type="button" id="mostraPreferiti" class="btn">Mostra preferiti</button>
+    <button type="button" id="eliminaPreferiti" class="btn">Elimina preferiti</button>   
+</fieldset>
+<div class="searchMatch"></div>
+<div class="searchMatch"></div>
+<div class="showResults"></div>
+
+<script src="main2.js"></script>
+</body>
+</html>
